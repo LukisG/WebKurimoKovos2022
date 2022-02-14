@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', { title: 'Main page' }) %>
+
+<body>
+    <%- include('../partials/header') %>
+    <div class="container">
+        <h1>User Page</h1>
+        <div class="card-deck">
+            <% arr = arr.map(function(elem) {
+            return '<div class="card"><h5 class="card-title">' + elem.name + '</h5> <h6 class="card-subtitle mb-2 text-muted">' + "location: " + elem.location + '</h6><div class="card-text"><p>'+ "Floor(s): "+elem.floor +'</p><p>'+ "Bedrooms: " + elem.bedrooms +'</p><p>'+ "Car spaces: "+ elem.car_spaces +'</p><p>'+ "Living spaces: " + elem.living_spaces +'</p><p>'+ "Bathrooms: " + elem.bathrooms +'</p><p>'+ "Area: "+ elem.area+ " &#13217;" +'</p><p>'+ "date sell from: "+ elem.date_sell_from +'</p><p>'+ "living spaces: " + elem.living_spaces +'</p><p>'+ "Price: "+ elem.price +" $"+'</p></div></div>';
+        }) -%>
+            <p><%- arr.join("  ") %></p>
+        </div>
+    </div>
+    </div>
+    <%- include('../partials/footer') %>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
